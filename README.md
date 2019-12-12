@@ -11,7 +11,7 @@ over the events pushed through the stream.
 
 ### What is an Event Stream?
 
-An event stream represent a logical flow of events.
+An event stream represents a logical flow of events which when pushed into the stream can be seen down stream by observers.
 
 ### What can be done with an Event Stream?
 
