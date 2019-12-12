@@ -5,9 +5,6 @@ System.Reactive.EventStream
 =========
 [![Build status](https://ahmedalejo.visualstudio.com/System.Reactive.EventStream/_apis/build/status/System.Reactive.EventStream-CI)](https://ahmedalejo.visualstudio.com/System.Reactive.EventStream/_build/latest?definitionId=3)
 
-
-<div>Icon made by <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-
 Provides the implementation for a reactive extensions event stream, 
 allowing trending and analysis queries to be performed in real-time 
 over the events pushed through the stream. 
@@ -139,3 +136,7 @@ public class FraudDetected
     public Guid CustomerID { get; }
 }
 ```
+
+
+
+<div>Icon made by <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
