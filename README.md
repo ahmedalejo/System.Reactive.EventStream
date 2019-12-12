@@ -1,5 +1,10 @@
-# System.Reactive.EventStream
+<img src="art/event-stream.png" alt="drawing" width="100"/>
+
+
+System.Reactive.EventStream 
+=========
 [![Build status](https://ahmedalejo.visualstudio.com/System.Reactive.EventStream/_apis/build/status/System.Reactive.EventStream-CI)](https://ahmedalejo.visualstudio.com/System.Reactive.EventStream/_build/latest?definitionId=3)
+
 
 <div>Icon made by <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
