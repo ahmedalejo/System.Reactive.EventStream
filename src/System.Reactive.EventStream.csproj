@@ -11,9 +11,9 @@
     <Authors>Ahmed Alejo</Authors>
     <PackageId>System.Reactive.EventStream</PackageId>
     <PackOnBuild>true</PackOnBuild>
-    <PackageIconUrl>https://raw.githubusercontent.com/ahmedalejo/System.Reactive.EventStream/master/art/event-stream.png</PackageIconUrl>
+    <Icon>https://raw.githubusercontent.com/ahmedalejo/System.Reactive.EventStream/master/art/event-stream.png</Icon>
     <NeutralLanguage>en</NeutralLanguage>
-    <PackageLicenseUrl>https://github.com/ahmedalejo/System.Reactive.EventStream/blob/master/LICENSE</PackageLicenseUrl>
+    <License>https://github.com/ahmedalejo/System.Reactive.EventStream/blob/master/LICENSE</License>
     <Owners>Ahmed Alejo</Owners>
     <PackageProjectUrl>https://github.com/ahmedalejo/System.Reactive.EventStream</PackageProjectUrl>
     <Summary>
