@@ -81,7 +81,7 @@ public class Withdrawal
 }
 ```
 
-Representation of an custormer withdrawal occurrence 
+Representation of a custormer withdrawal occurrence 
 
 ```csharp
 public class CustomerWithdrew : Withdrawal
