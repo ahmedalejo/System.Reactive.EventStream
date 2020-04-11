@@ -37,7 +37,7 @@ steps:
   displayName: 'VsTest - testAssemblies'
   inputs:
     testAssemblyVer2: |
-     **\*tests*.dll
+     $(build.artifactstagingdirectory)\**\*tests*.dll
      !**\*TestAdapter.dll
      !**\obj\**
     runInParallel: true
