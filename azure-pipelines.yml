@@ -32,9 +32,17 @@ steps:
      !**\obj\**
     runInParallel: true
     codeCoverageEnabled: true
-    otherConsoleOptions: ' /Logger:"console"'
+    otherConsoleOptions: ' /Logger:"console" /p:CoverletOutputFormat=cobertura /p:CoverletOutput=$(Build.SourcesDirectory)/TestResults/Coverage/'
     failOnMinTestsNotRun: true
     diagnosticsEnabled: true
+
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: 'cobertura'
+    summaryFileLocation: $(Build.SourcesDirectory)/TestResults/Coverage/**/coverage.cobertura.xml
+    reportDirectory: $(Build.SourcesDirectory)/TestResults/Coverage/Reports
+    failIfCoverageEmpty: false 
+
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
   inputs:
