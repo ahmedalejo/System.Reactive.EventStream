@@ -11,6 +11,10 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
+  major: '1'
+  minor: '0'
+  revision: $[counter(variables['minor'], 1)]
+  app_version: '$(major).$(minor).$(revision)'
 
 steps:
 - task: NuGetCommand@2
@@ -32,7 +36,7 @@ steps:
      !**\obj\**
     runInParallel: true
     codeCoverageEnabled: true
-    otherConsoleOptions: ' /Logger:"console" /p:CoverletOutputFormat=cobertura /p:CoverletOutput=$(Build.SourcesDirectory)/TestResults/Coverage/'
+    otherConsoleOptions: ' /Logger:"console" /CoverletOutputFormat:"cobertura" /CoverletOutput:"$(Build.SourcesDirectory)/TestResults/Coverage/"'
     failOnMinTestsNotRun: true
     diagnosticsEnabled: true
 
