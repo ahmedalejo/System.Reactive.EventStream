@@ -94,7 +94,7 @@ public class CustomerWithdrew : Withdrawal
 }
 ```
 
-The we have an aggregate for keeping state
+Then we have an aggregate for keeping state
 
 ```csharp
 public class WithdrawalPeriod
@@ -125,7 +125,7 @@ public class WithdrawalPeriod
 }
 ```
 
-The fraud detection event which can be used to trigger a detail analise somewhere else
+The fraud detection event that can be used to trigger a detailed analysis somewhere else
 
 ```csharp
 public class FraudDetected
