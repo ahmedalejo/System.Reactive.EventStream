@@ -11,10 +11,11 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  major: '1'
-  minor: '0'
+  #see https://github.com/LanceMcCarthy/DevReachCompanion/blob/master/azure-pipelines.yml
+  major: '0'
+  minor: '1'
   revision: $[counter(variables['minor'], 1)]
-  app_version: '$(major).$(minor).$(revision)'
+  App.Version: '$(major).$(minor).$(revision)'
 
 steps:
 - task: NuGetCommand@2
@@ -26,6 +27,7 @@ steps:
   inputs:
     solution: '**\*.sln'
     configuration: '$(buildConfiguration)'
+    msbuildArgs: '/p:AssemblyVersion:$(App.Version) /p:AssemblyFileVersion:$(App.Version) /p:Version:$(App.Version)'
     
 - task: VSTest@2
   displayName: 'VsTest - testAssemblies'
@@ -36,16 +38,10 @@ steps:
      !**\obj\**
     runInParallel: true
     codeCoverageEnabled: true
-    otherConsoleOptions: ' /Logger:"console" /CoverletOutputFormat:"cobertura" /CoverletOutput:"$(Build.SourcesDirectory)/TestResults/Coverage/"'
+    otherConsoleOptions: ' /Logger:"console"'
     failOnMinTestsNotRun: true
     diagnosticsEnabled: true
-
-- task: PublishCodeCoverageResults@1
-  inputs:
-    codeCoverageTool: 'cobertura'
-    summaryFileLocation: $(Build.SourcesDirectory)/TestResults/Coverage/**/coverage.cobertura.xml
-    reportDirectory: $(Build.SourcesDirectory)/TestResults/Coverage/Reports
-    failIfCoverageEmpty: false 
+    publishRunAttachments: true
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
