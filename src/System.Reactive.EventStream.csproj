@@ -7,26 +7,6 @@
     <AssemblyVersion>0.1.0.0</AssemblyVersion>
     <AssemblyFileVersion>0.1.0.0</AssemblyFileVersion>
     <Version>0.1.0.0</Version>
-    <PackageVersion>0.1.0.0</PackageVersion>
-    <Authors>Ahmed Alejo</Authors>
-    <PackageId>System.Reactive.EventStream</PackageId>
-    <PackOnBuild>true</PackOnBuild>
-    <Icon>https://raw.githubusercontent.com/ahmedalejo/System.Reactive.EventStream/master/art/event-stream.png</Icon>
-    <NeutralLanguage>en</NeutralLanguage>
-    <License>https://github.com/ahmedalejo/System.Reactive.EventStream/blob/master/LICENSE</License>
-    <Owners>Ahmed Alejo</Owners>
-    <PackageProjectUrl>https://github.com/ahmedalejo/System.Reactive.EventStream</PackageProjectUrl>
-    <Summary>
-      Provides the implementation for a reactive extensions event stream,
-      allowing trending and analysis queries to be performed in real-time
-      over the events pushed through the stream.</Summary>
-    <PackageTags>eventstream, reactive, reactive extension, rx, OLTP, xamarin, windows, ios, android, cache, http</PackageTags>
-    <Title>System.Reactive.EventStream - A .NET event stream library</Title>
-    <Description>A simple event stream that allows orchestrating simple complex realtime processing based on Reactive extensions.</Description>
-    <Copyright>2019 Ahmed Alejo</Copyright>
-    <RepositoryUrl>https://github.com/ahmedalejo/System.Reactive.EventStream</RepositoryUrl>
-    <PackageReleaseNotes>See: https://github.com/ahmedalejo/System.Reactive.EventStream </PackageReleaseNotes>
-
     <LangVersion>default</LangVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <GenerateDocumentationFile Condition=" '$(Configuration)' == 'Release' ">true</GenerateDocumentationFile>
@@ -47,14 +27,26 @@
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta-63127-02" PrivateAssets="All" />
   </ItemGroup>
 
-  <PropertyGroup>
+  <PropertyGroup Label="Nuget">
+    <PackageVersion>0.1.0.0</PackageVersion>
+    <Authors>Ahmed Alejo</Authors>
+    <PackageId>System.Reactive.EventStream</PackageId>
+    <PackOnBuild>true</PackOnBuild>
+    <Icon>https://raw.githubusercontent.com/ahmedalejo/System.Reactive.EventStream/master/art/event-stream.png</Icon>
+    <NeutralLanguage>en</NeutralLanguage>
+    <License>https://github.com/ahmedalejo/System.Reactive.EventStream/blob/master/LICENSE</License>
+    <Owners>Ahmed Alejo</Owners>
     <PackageProjectUrl>https://github.com/ahmedalejo/System.Reactive.EventStream</PackageProjectUrl>
-    <Description>
+    <Summary>
       Provides the implementation for a reactive extensions event stream,
       allowing trending and analysis queries to be performed in real-time
-      over the events pushed through the stream.
-    </Description>
-    <PackageTags>System.Reactive.EventStream EventStream RX Reactive</PackageTags>
+      over the events pushed through the stream.</Summary>
+    <PackageTags>eventstream, reactive, reactive extension, rx, Rx.Net, OLTP, xamarin, windows, ios, android</PackageTags>
+    <Title>System.Reactive.EventStream - A .NET event stream library</Title>
+    <Description>A simple event stream that allows orchestrating both simple and complex realtime stream processing based on Reactive extensions.</Description>
+    <Copyright>2020 Ahmed Alejo</Copyright>
+    <RepositoryUrl>https://github.com/ahmedalejo/System.Reactive.EventStream</RepositoryUrl>
+    <PackageReleaseNotes>See: https://github.com/ahmedalejo/System.Reactive.EventStream </PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
