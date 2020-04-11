@@ -4,9 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>latest</LangVersion>
     <IsPackable>true</IsPackable>
-    <AssemblyVersion>0.1.0.0</AssemblyVersion>
-    <AssemblyFileVersion>0.1.0.0</AssemblyFileVersion>
-    <Version>0.1.0.0</Version>
+    <Version Condition=" '$(Version)' == '' ">0.1.0.0</Version>
     <LangVersion>default</LangVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <GenerateDocumentationFile Condition=" '$(Configuration)' == 'Release' ">true</GenerateDocumentationFile>
@@ -28,7 +26,6 @@
   </ItemGroup>
 
   <PropertyGroup Label="Nuget">
-    <PackageVersion>0.1.0.0</PackageVersion>
     <Authors>Ahmed Alejo</Authors>
     <PackageId>System.Reactive.EventStream</PackageId>
     <PackOnBuild>true</PackOnBuild>
