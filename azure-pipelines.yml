@@ -30,7 +30,8 @@ steps:
     msbuildArgs: '/p:AssemblyVersion="$(App.Version)" 
                   /p:AssemblyFileVersion="$(App.Version)" 
                   /p:Version="$(App.Version)"
-                  /p:PackageVersion="$(App.Version)"'
+                  /p:PackageVersion="$(App.Version)"
+                  /p:OutputPath="$(build.artifactstagingdirectory)"'
     
 - task: VSTest@2
   displayName: 'VsTest - testAssemblies'
@@ -49,6 +50,6 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
   inputs:
-    PathtoPublish: '**\bin\$(buildConfiguration)\**'
+    PathtoPublish: '$(build.artifactstagingdirectory)'
   condition: succeededOrFailed()
   
