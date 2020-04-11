@@ -13,12 +13,16 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- task: NuGetCommand@2
+  inputs:
+    command: 'restore'
+    restoreSolution: '**/*.sln'
 - task: VSBuild@1
   displayName: 'Build $(buildConfiguration)'
   inputs:
     solution: '**\*.sln'
     configuration: '$(buildConfiguration)'
-    restoreNugetPackages: true
+    
 - task: VSTest@2
   displayName: 'VsTest - testAssemblies'
   inputs:
