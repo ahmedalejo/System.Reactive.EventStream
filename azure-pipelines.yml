@@ -27,7 +27,7 @@ steps:
   inputs:
     solution: '**\*.sln'
     configuration: '$(buildConfiguration)'
-    msbuildArgs: '/p:AssemblyVersion:"$(App.Version)" /p:AssemblyFileVersion:"$(App.Version)" /p:Version:"$(App.Version)"'
+    msbuildArgs: '/p:AssemblyVersion="$(App.Version)" /p:AssemblyFileVersion="$(App.Version)" /p:Version="$(App.Version)"'
     
 - task: VSTest@2
   displayName: 'VsTest - testAssemblies'
